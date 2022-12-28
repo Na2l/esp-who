@@ -8,19 +8,10 @@ This example is designed for [**ESP32-S3-EYE**](https://www.espressif.com/zh-han
 
 ### Step 1: Set wake-up word and command words
 
-This example presets two sets of wake-up words and command words in Chinese and English.
+This example presets wake-words and command-words in English.
 
-#### Chinese:
 
-If you use Chinese, you need to mute [Line49~Line60](./sdkconfig.defaults#L49) in `sdkconfig.defaults` by adding "#" in front, and delete the "#" in the front of [Line35~Line46](./sdkconfig.defaults#L35). *Chinese is set by defaults. So in defaults setting, nothing should be modified.*
-
-The Chinese wake-up word is "Hi, Lexin", and the command words include: "Ting Zhi Gong Zuo", "Jin Xian Shi", "Ren Lian Shi Bie", "Yi Dong Zhen Ce", "Tian Jia Ren Lian", "Shan Chu Ren Lian" and "Shi Bie Yi Xia".
-
-#### English:
-
-If you use English, you need to mute [Line35~Line46](./sdkconfig.defaults#L35) in `sdkconfig.defaults` by adding "#" in front, and delete the "#" in the front of [Line49~Line60](./sdkconfig.defaults#L49).
-
-The English wake-up word is "Hi, ESP", and the command words include: "Stop Working", "Display Only", "Face Recognition", "Motion Detection", "Enter Face", "Delete Face" and "Recognize Face".
+The English wake-word is "Hi, ESP", and the command words include: "Stop Working", "Display Only", "Face Recognition", "Motion Detection", "Enter Face", "Delete Face" and "Recognize Face".
 
 > Of course, you can also choose other wake-up words and command words in menuconfig.
 
@@ -41,9 +32,8 @@ idf.py set-target esp32s3
 Flash the program and launch IDF Monitor:
 
 ```shell
-idf.py flash monitor
+idf.py -b 2000000 flash monitor
 ```
-
 
 
 ## Example Description
